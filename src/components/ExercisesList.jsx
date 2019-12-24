@@ -43,14 +43,14 @@ function ExerciseList() {
         <tbody>
           {exercises.map((exercise, index) => {
             return (
-              <tr>
+              <tr key={index}>
                 <td>{exercise.username}</td>
                 <td>{exercise.description}</td>
                 <td>{exercise.duration}</td>
                 <td>{exercise.date.substring(0, 10)}</td>
                 <td>
                   <Link to={"/edit/" + exercise._id}>Edit</Link>-
-                  <Link onClick={e => deleteExercise(exercise._id)}>
+                  <Link to="#" onClick={e => deleteExercise(exercise._id)}>
                     Delete
                   </Link>
                 </td>

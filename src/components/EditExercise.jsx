@@ -9,14 +9,12 @@ function EditExercise(props) {
   const [date, setDate] = useState();
   const [description, setDescription] = useState();
   const [duration, setDuration] = useState();
-  const [id, setId] = useState();
 
   useEffect(() => {
     //Fetching exercise
     axios
       .get("http://localhost:5000/exercises/" + props.match.params.id)
       .then(res => {
-        setId(res.data._id);
         setCurrentUser(res.data.username);
         setDescription(res.data.description);
         setDuration(res.data.duration);
@@ -38,7 +36,7 @@ function EditExercise(props) {
       .catch(err => {
         console.log(err);
       });
-  }, []);
+  }, [props.match.params.id]);
 
   function editExercise() {
     let tempExercise = {

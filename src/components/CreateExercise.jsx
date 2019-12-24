@@ -64,10 +64,10 @@ function CreateExercise() {
     <div>
       <h3>Create new exercise log</h3>
       <form>
-        <div class="form-group">
-          <label for="dropdown-select">User:</label>
+        <div className="form-group">
+          <label htmlFor="dropdown-select">User:</label>
           <select
-            class="form-control"
+            className="form-control"
             onChange={e => setCurrentUser(e.target.value)}
           >
             {users.map((value, index) => {
