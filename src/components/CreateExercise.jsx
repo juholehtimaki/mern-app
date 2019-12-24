@@ -4,7 +4,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import axios from "axios";
 import { render } from "@testing-library/react";
 
-function CreateExercise() {
+export const CreateExercise = () => {
   const [users, setUsers] = useState([]);
   const [currentUser, setCurrentUser] = useState(users[0]);
   const [date, setDate] = useState();
@@ -110,6 +110,4 @@ function CreateExercise() {
       </form>
     </div>
   );
-}
-
-export default CreateExercise;
+};

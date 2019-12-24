@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 //Components
 import { NavigationBar } from "./components/NavigationBar.jsx";
-import ExercisesList from "./components/ExercisesList.jsx";
-import EditExercise from "./components/EditExercise.jsx";
-import CreateExercise from "./components/CreateExercise.jsx";
-import CreateUser from "./components/CreateUser.jsx";
+import { ExercisesList } from "./components/ExercisesList.jsx";
+import { EditExercise } from "./components/EditExercise.jsx";
+import { CreateExercise } from "./components/CreateExercise.jsx";
+import { CreateUser } from "./components/CreateUser.jsx";
 
-function App() {
+export const App = () => {
   return (
     <Router>
       <NavigationBar />
@@ -21,6 +21,4 @@ function App() {
       </div>
     </Router>
   );
-}
-
-export default App;
+};

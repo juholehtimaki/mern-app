@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-function ExerciseList() {
+export const ExercisesList = () => {
   const [exercises, setExercises] = useState([]);
 
   useEffect(() => {
@@ -61,6 +61,4 @@ function ExerciseList() {
       </table>
     </div>
   );
-}
-
-export default ExerciseList;
+};

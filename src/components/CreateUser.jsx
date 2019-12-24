@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { render } from "@testing-library/react";
 
-function CreateUser() {
+export const CreateUser = () => {
   const [username, setUsername] = useState();
 
   function submit() {
@@ -55,6 +55,4 @@ function CreateUser() {
       </form>
     </div>
   );
-}
-
-export default CreateUser;
+};

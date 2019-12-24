@@ -3,7 +3,7 @@ import axios from "axios";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-function EditExercise(props) {
+export const EditExercise = props => {
   const [users, setUsers] = useState([]);
   const [currentUser, setCurrentUser] = useState();
   const [date, setDate] = useState();
@@ -112,6 +112,4 @@ function EditExercise(props) {
       </form>
     </div>
   );
-}
-
-export default EditExercise;
+};
